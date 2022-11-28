@@ -28,4 +28,7 @@ export const AppContainer = styled.div`
             width: 600px;
             height: 100vh;
 
+            display: flex;
+            flex-direction: column;
+
 `

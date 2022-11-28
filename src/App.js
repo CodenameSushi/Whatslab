@@ -1,6 +1,8 @@
 import Header from "./components/Header/Header";
 import { useState } from "react";
 import { AppContainer } from "./GlobalStyle";
+import Main from "./components/Main/Main";
+import {initialMessages} from "./assets/initialMessages"
 
 function App() {
   const [currSender, setCurrSender] = useState("Me");
@@ -16,13 +18,22 @@ function App() {
     setCurrSender(e.target.value)
   }
 
+  const [messages, setMessages] = useState(initialMessages)
+
+  console.log(messages)
+
   return (
     <AppContainer>
         <Header 
           senders={senders}
           currSender={currSender} 
           onChangeSender={onChangeSender}/>
-          <h1>{currSender}</h1>
+
+          <Main
+          messages={messages} 
+          />
+          
+
     </AppContainer>
   );
 }

@@ -4,7 +4,6 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
     padding: 12px;
 
     div.senderProfile {
